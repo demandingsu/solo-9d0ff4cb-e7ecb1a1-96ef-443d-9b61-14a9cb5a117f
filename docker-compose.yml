@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    image: ticket-package-api:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - package-data:/data
+    restart: unless-stopped
+
+volumes:
+  package-data:
